@@ -1,28 +1,49 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Grid
 {
+    /// <summary>
+    /// Responsible for all the operations with Grid creation
+    /// </summary>
     public class GridCreator : MonoBehaviour
     {
         #region Variables
 
+        /// <summary>
+        /// A default object that serves as a base for the grid
+        /// </summary>
         [Tooltip("A default object that serves as a base for the grid")][SerializeField] private GridBaseObject defaultGridBaseObject;
+        /// <summary>
+        /// Reference to the Input Field of X Grid
+        /// </summary>
         [Space(10)]
         [Header("UI")]
         [Tooltip("Reference to the Input Field of X Grid")] [SerializeField] private TMP_InputField gridXInputField;
+        /// <summary>
+        /// Reference to the Input Field of X Grid
+        /// </summary>
         [Tooltip("Reference to the Input Field of X Grid")] [SerializeField] private TMP_InputField gridYInputField;
+        /// <summary>
+        /// Reference to the Apply Button
+        /// </summary>
         [Tooltip("Reference to the Apply Button")] [SerializeField] private Button applyButton;
+        /// <summary>
+        /// Reference to the UI Notification Text Element
+        /// </summary>
         [Tooltip("Reference to the UI Notification Text Element")] [SerializeField] private TextMeshProUGUI notificationText;
 
+        /// <summary>
+        /// Duration of the notification pop-up
+        /// </summary>
         [Space(10)] 
         [Tooltip("Duration of the notification pop-up")] [Range(1f, 5f)] [SerializeField] private float notificationDuration = 1.5f;
 
+        /// <summary>
+        /// Reference to the parent object of grid objects
+        /// </summary>
         [Header("Spawner")] 
         [Tooltip("Reference to the parent object of grid objects")] [SerializeField] private Transform parentReference;
         
@@ -30,6 +51,9 @@ namespace Grid
 
         #region Events
 
+        /// <summary>
+        /// The method that initializes the call to start building the grid, called from UI
+        /// </summary>
         public void StartBuildingGrid()
         {
             if (gridXInputField.text.Equals("") || gridYInputField.text.Equals("") || int.Parse(gridXInputField.text) <= 0 || int.Parse(gridYInputField.text) <= 0)
@@ -49,6 +73,9 @@ namespace Grid
 
         #region Grid
 
+        /// <summary>
+        /// Builds the grid of the user's choice
+        /// </summary>
         private void BuildGrid()
         {
             ClearGrid();
@@ -81,6 +108,9 @@ namespace Grid
             }
         }
 
+        /// <summary>
+        /// Destroys current grid
+        /// </summary>
         private void ClearGrid()
         {
             for (var i = 0; i < parentReference.childCount; i++)
@@ -93,6 +123,10 @@ namespace Grid
 
         #region UI Notification
 
+        /// <summary>
+        /// Sets notification of the grid build status succession depending on the flag
+        /// </summary>
+        /// <param name="isSuccessful">Flag that indicates if the build process was successful</param>
         private void NotifyUser(bool isSuccessful)
         {
             notificationText.text = isSuccessful ? "Grid created" : "Enter correct data";
@@ -104,6 +138,10 @@ namespace Grid
             StartCoroutine(ShowNotification());
         }
 
+        /// <summary>
+        /// Enables Notification UI Text and the button after certain delay
+        /// </summary>
+        /// <returns>Coroutine IEnumerator</returns>
         private IEnumerator ShowNotification()
         {
             yield return new WaitForSeconds(notificationDuration);

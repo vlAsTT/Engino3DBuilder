@@ -1,26 +1,44 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CameraController
 {
+    /// <summary>
+    /// Responsible for Camera Switch, Zoom & Centralize
+    /// </summary>
     public class CameraController : MonoBehaviour
     {
         #region Variables
 
+        /// <summary>
+        /// Reference to the 2D Camera
+        /// </summary>
         [Header("Cameras")]
         [Tooltip("Reference to the 2D Camera")][SerializeField] private Camera Camera2D;
+        /// <summary>
+        /// Reference to the Isometric Camera
+        /// </summary>
         [Tooltip("Reference to the Isometric Camera")][SerializeField] private Camera CameraIsometric;
 
+        /// <summary>
+        /// Speed of zoom
+        /// </summary>
         [Space(10)] 
         [Tooltip("Speed of zoom")] [SerializeField] private float zoomSpeed = 10f;
 
+        /// <summary>
+        /// Max Possible Zoom Limit for Isometric Camera
+        /// </summary>
         [Tooltip("Max Possible Zoom Limit for Isometric Camera")] [SerializeField] [Range(60, 120)] private int IsometricCameraLimit = 100;
 
+        /// <summary>
+        /// Indicates if the program should start with 2D Camera as default
+        /// </summary>
         [Space(10)] 
         [SerializeField] private bool StartWith2DCameraByDefault = true;
-        private bool isIsometricCameraEnabled = false;
+        /// <summary>
+        /// Indicates what camera is currently enabled
+        /// </summary>
+        private bool isIsometricCameraEnabled;
         
         #endregion
 
@@ -47,6 +65,9 @@ namespace CameraController
             }
         }
 
+        /// <summary>
+        /// Responsible for Camera Zoom
+        /// </summary>
         private void Update()
         {
             // Isometric Camera needs to be checked for the top limit, while 2D Camera's FOV is limited to 179
