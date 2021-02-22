@@ -16,6 +16,9 @@ namespace Grid
         /// </summary>
         private const int sideSize = 3;
 
+        /// <summary>
+        /// Reference to the RawImage Object of the GridBaseObject
+        /// </summary>
         [SerializeField] private RawImage _image;
 
         #endregion
@@ -43,6 +46,10 @@ namespace Grid
             return sideSize;
         }
 
+        /// <summary>
+        /// Sets new Block Texture
+        /// </summary>
+        /// <param name="newBlock">New Block Texture</param>
         public void AttachBlock(Texture newBlock)
         {
             _image.texture = newBlock;

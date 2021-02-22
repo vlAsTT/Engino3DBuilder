@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Grid;
+﻿using Grid;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,41 +6,52 @@ using UnityEngine.UI;
 namespace Blocks
 {
     /// <summary>
-    /// 
+    /// A base class for UI representation of the Block that contains Image of a texture
     /// </summary>
     [RequireComponent(typeof(RawImage))]
-    public class BlockUI : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+    public class BlockUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
     {
-        #region Variables
+        #region References
 
+        /// <summary>
+        /// Reference to the Canvas of a general UI
+        /// </summary>
         [SerializeField] private Canvas canvas;
+        /// <summary>
+        /// Reference to the RectTransform component of the block
+        /// </summary>
         private RectTransform _rectTransform;
+        /// <summary>
+        /// Reference to the Raw Image Component of the block
+        /// </summary>
         private RawImage _image;
 
         #endregion
 
         #region Events
 
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            
-        }
-        
+        /// <summary>
+        /// Instantiates a copy of the object that was dragged
+        /// </summary>
+        /// <param name="eventData">Event Data</param>
         public void OnBeginDrag(PointerEventData eventData)
         {
             var obj = Instantiate(gameObject, transform.position, Quaternion.identity, transform.parent);
             obj.name = name;
         }
 
+        /// <summary>
+        /// Checks if the object was on top of any GridBaseObject object
+        /// If yes - attaches a block to it, at the end - self-destroys
+        /// </summary>
+        /// <param name="eventData">Event Data</param>
         public void OnEndDrag(PointerEventData eventData)
         {
-            RaycastHit hit;
-
             if (Camera.main is null) return;
             
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out var hit, Mathf.Infinity))
             {
                 var obj = hit.transform.GetComponent<GridBaseObject>();
 
@@ -56,6 +64,10 @@ namespace Blocks
             Destroy(gameObject);
         }
 
+        /// <summary>
+        /// Moves image with mouse pointer
+        /// </summary>
+        /// <param name="eventData">Event Data</param>
         public void OnDrag(PointerEventData eventData)
         {
             _rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
@@ -65,6 +77,9 @@ namespace Blocks
 
         #region Functions
 
+        /// <summary>
+        /// Initializes references
+        /// </summary>
         private void Awake()
         {
             _rectTransform = GetComponent<RectTransform>();
