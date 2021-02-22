@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fcb7d56a-94f3-4d3d-9330-917961262da0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Engino/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Engino/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grid/GridCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Grid/GridCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TMP/Karla-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TMP/Karla-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TMP/Karla-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TMP/Karla-ExtraBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TMP/Karla-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TMP/Karla-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TMP/Karla-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TMP/Karla-SemiBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +27,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraSwitcher.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Grid/GridBaseObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Blocks/BlockUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Grid/GridCreator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ok5pcR9KydSSkfhBpZEq8ZjMjV" />
@@ -64,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613817933723</updated>
       <workItem from="1613817937507" duration="11578000" />
-      <workItem from="1613994675891" duration="6921000" />
+      <workItem from="1613994675891" duration="7823000" />
     </task>
     <servers />
   </component>

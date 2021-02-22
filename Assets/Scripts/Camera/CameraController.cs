@@ -167,7 +167,7 @@ namespace CameraController
             {
                 var transform2D = Camera2D.transform;
 
-                transform2D.position = _originCamera2D;
+                transform2D.position = new Vector3(_originCamera2D.x, transform2D.position.y, _originCamera2D.z);
                 transform2D.LookAt(Vector3.zero);
             }
         }
