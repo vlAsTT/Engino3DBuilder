@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -56,14 +57,22 @@ namespace Grid
         /// </summary>
         public void StartBuildingGrid()
         {
-            if (gridXInputField.text.Equals("") || gridYInputField.text.Equals("") || int.Parse(gridXInputField.text) <= 0 || int.Parse(gridYInputField.text) <= 0)
+            try
+            {
+                if (gridXInputField.text.Equals("") || gridYInputField.text.Equals("") ||
+                    int.Parse(gridXInputField.text) <= 0 || int.Parse(gridYInputField.text) <= 0)
+                {
+                    NotifyUser(false);
+                }
+                else
+                {
+                    BuildGrid();
+                    NotifyUser(true);
+                }
+            }
+            catch (FormatException)
             {
                 NotifyUser(false);
-            }
-            else
-            {
-                BuildGrid();
-                NotifyUser(true);
             }
         }
 
