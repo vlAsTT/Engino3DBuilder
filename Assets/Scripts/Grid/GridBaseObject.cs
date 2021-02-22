@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Grid
 {
@@ -13,7 +14,9 @@ namespace Grid
         /// <summary>
         /// Size of one of the sides of the Grid Base Object
         /// </summary>
-        private const int sideSize = 5;
+        private const int sideSize = 3;
+
+        [SerializeField] private RawImage _image;
 
         #endregion
 
@@ -40,6 +43,11 @@ namespace Grid
             return sideSize;
         }
 
+        public void AttachBlock(Texture newBlock)
+        {
+            _image.texture = newBlock;
+        }
+        
         #endregion
     }
 }

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcb7d56a-94f3-4d3d-9330-917961262da0" name="Default Changelist" comment="" />
+    <list default="true" id="fcb7d56a-94f3-4d3d-9330-917961262da0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Engino/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Engino/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Engino/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Engino/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blocks/Prefabs/Default Grid Object.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Blocks/Prefabs/Default Grid Object.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/DefaultBlockMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/DefaultBlockMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grid/GridBaseObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Grid/GridBaseObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,12 +22,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Blocks/BlockUI.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraSwitcher.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Grid/GridCreator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Grid/GridBaseObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Grid/GridCreator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Blocks/BlockUI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ok5pcR9KydSSkfhBpZEq8ZjMjV" />
@@ -57,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613817933723</updated>
       <workItem from="1613817937507" duration="11578000" />
+      <workItem from="1613994675891" duration="4683000" />
     </task>
     <servers />
   </component>
@@ -72,6 +89,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
